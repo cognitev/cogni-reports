@@ -1,0 +1,138 @@
+.cogni-report__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.cogni-report__container * {
+  box-sizing: border-box;
+}
+
+.cogni-report__statistics {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cogni-report__statistic {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100px;
+  height: 75px;
+  outline: none;
+}
+
+.cogni-report__statistic {
+  border: 1px solid #ededed;
+  cursor: pointer;
+}
+
+.cogni-report__statistic-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cogni-report__statistic-unit {
+  font-size: 12px;
+}
+
+.cogni-report__statistic-title {
+  margin: 5px 0;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.cogni-report__bold {
+  font-weight: bold;
+}
+
+.cogni-report__capitalize {
+  text-transform: capitalize;
+}
+
+.cogni-report__large {
+  width: 100%;
+  min-width: 375px;
+}
+
+.cogni-report__medium {
+  width: calc(50% - 10px);
+  max-width: calc(50% - 10px);
+  min-width: 375px;
+}
+
+.cogni-report__small {
+  width: 25%;
+  max-width: 25%;
+  min-width: 375px;
+}
+
+.cogni-report__pieChart-tooltip-container {
+  background: #ffffff;
+  min-width: 150px;
+  max-width: 250px;
+  display: flex;
+  align-items: center;
+}
+
+.cogni-report__tooltip-value {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.cogni-report__square {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.cogni-report__lineChart-tooltip-container {
+  background: #ffffff;
+  min-width: 150px;
+  max-width: 250px;
+  padding: 9px 12px;
+  border: 1px solid #cccccc;
+  text-align: center;
+}
+
+.cogni-report__map-tooltip-container {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  min-width: 150px;
+  max-width: 250px;
+  border: 1px solid #cccccc;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.cogni-report__lineChart-tooltip-row {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.cogni-report__card {
+  background-color: #ffffff;
+  padding: 20px;
+  flex-grow: 1;
+  font-family: Helvetica, sans-serif;
+}
+
+.cogni-report__card h3 {
+  color: #ffffff;
+  margin: -20px -20px 20px;
+  padding: 12px 16px;
+  background-color: #31365d;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.cogni-report__card {
+  margin-bottom: 20px;
+}
