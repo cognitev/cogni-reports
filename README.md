@@ -10,13 +10,23 @@
 
 **cogni-reports** is a [React](https://facebook.github.io/react/) component library that specializes in report and analytics components.
 
+## 🎥 Live Examples
+
+See the [storybook](https://cogni-reports.now.sh/) for live examples.
+
+
 ## 🔨 Usage
 
-Install cogni-reports using either **yarn** or **npm**:
+Install **cogni-reports** using **yarn**:
 
 ```shell
   $ yarn add cogni-reports
 ```
+or **npm**:
+```shell
+  $ npm i cogni-reports
+```
+
 Import the necessary components from the library:
 ```shell
   $ import ReportPage, { LineChart, Map, PieChart, Statistics } from 'cogni-reports';
@@ -45,12 +55,12 @@ Import the necessary components from the library:
 |-----------|------------------------------------------|------------|---------|----|
 | id | An identification for the line | any string, example: `visits` | _ | **true** |
 | color | Line color and legend background color | any color string | _ | **true** |
-| expected | Expected number for this specific line | any number | _ | **false**|
+| expected | Expected number for this specific line, a horizontal line that represents this expected value appears if the prop is passed | any number | _ | **false**|
 | data | An array of points, each of which is represented by an object that has `x` and `y` | _  | _ | **true**
 | legend | If passed, a legend square for this line will be displayed | an object | _ | **false** |
 | <small>legend.value</small> | The value presented on the legend | any number | _ | **false** |
 | <small>legend.unit<small> | Legend value unit | any string | _ | **false** |
-| <small>legend.color<small> | Text color for the legend | any color string | `#000` | **false** |
+| <small>legend.color<small> | Text color for the legend | any color string | `#000000` | **false** |
 | <small>legend.min<small> | Minimum value for this legend, if the legend value is lower than this number, a down arrow will be displayed | any number | _ | **false** |
 | <small>legend.max<small> | Maximum value for this legend, if the legend value is higher than this number, an up arrow will be displayed. If the legend value is between `min` and `max`, a checkmark is displayed | any number | _ | **false** |
 <br/>
@@ -254,7 +264,7 @@ export default main;
 ```
 <br/>
 
-### - <img src="https://cutt.ly/DtpVcFg" style="width:25px;margin-bottom:-4px" /> Pie Chart
+### - <img src="https://cutt.ly/DtpVcFg" style="max-width:25px!important;margin-bottom:-4px" /> Pie Chart
 
 <br/>
 <img src="https://i.ibb.co/D1jjfTb/pie.png" />
@@ -275,7 +285,7 @@ export default main;
 |-----------|------------------------------------------|------------|---------|----|
 | id | An identification for the pie piece | any string, example: `visits` | _ | **true** |
 | label | A label that appears when you hover on this pie piece | any string, example: `Visits` | _ | **true**
-| color | Line color and legend background color | any color string | `#000` | **false** |
+| color | Line color and legend background color | any color string | `#000000` | **false** |
 | value | Number associated with this pie piece | any number | _ | **true**|
 <br/>
 
@@ -332,8 +342,8 @@ export default main;
 | Name    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | title | Box title | any string, example: `visits` | _ | **true** |
-| backgroundColor | Box background color | any color string | `#fff` | **false** |
-| color | Box text color | any color string | `#000` | **false** |
+| backgroundColor | Box background color | any color string | `#ffffff` | **false** |
+| color | Box text color | any color string | `#000000` | **false** |
 | unit | Value unit | any string | _ | **false** |
 | value | Number associated with box | any number | _ | **true**|
 | min | Minimum value for this legend, if the legend value is lower than this number, a down arrow will be displayed | any number | _ | **false** |
@@ -463,11 +473,7 @@ export default main;
 Where `statisticsData`, `lineChartData`, `mapData` and `pieChartData` are the regular data arrays passed to each of these components.
 
 ## 🌐 Browser Support
-We support and test the Carbon Library against the following browsers:
+We support and test the **cogni-reports** against the following browsers:
 * [Chrome](https://www.google.com/chrome/)
 * [Firefox](https://www.mozilla.org/firefox/)
 * [Safari](https://www.apple.com/safari/)
-
-## 🎥 Live Examples
-
-See the [storybook](https://cogni-reports.now.sh/) for live examples.
