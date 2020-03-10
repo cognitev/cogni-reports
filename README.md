@@ -22,8 +22,6 @@ Import the necessary components from the library:
   $ import ReportPage, { LineChart, Map, PieChart, Statistics } from 'cogni-reports';
 ```
 <br/>
-
-
 <br/>
 
 ## 🧱 Components
@@ -33,13 +31,28 @@ Import the necessary components from the library:
 <br/>
 <br/>
 
+##### Passed props
 | Prop    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | size | Controls the chart size | `small`, `medium`, `large` | `large` | **false** |
 | title | Title at the top of the chart | any string | _ | **false** |
 | className | Sets line chart custom className | any string | _ | **false** |
 | data | An array of objects, each of which describes a specific line on the chart | _  | _ | **true**
+<br/>
 
+##### Data object
+| Name    | Description                              | Options       | Default | Required |
+|-----------|------------------------------------------|------------|---------|----|
+| id | An identification for the line | any string, example: `visits` | _ | **true** |
+| color | Line color and legend background color | any color string | _ | **true** |
+| expected | Expected number for this specific line | any number | _ | **false**|
+| data | An array of points, each of which is represented by an object that has `x` and `y` | _  | _ | **true**
+| legend | If passed, a legend square for this line will be displayed | an object | _ | **false** |
+| <small>legend.value</small> | The value presented on the legend | any number | _ | **false** |
+| <small>legend.unit<small> | Legend value unit | any string | _ | **false** |
+| <small>legend.color<small> | Text color for the legend | any color string | `#000` | **false** |
+| <small>legend.min<small> | Minimum value for this legend, if the legend value is lower than this number, a down arrow will be displayed | any number | _ | **false** |
+| <small>legend.max<small> | Maximum value for this legend, if the legend value is higher than this number, an up arrow will be displayed. If the legend value is between `min` and `max`, a checkmark is displayed | any number | _ | **false** |
 <br/>
 
 ##### 👨‍💻 Usage example
@@ -50,7 +63,6 @@ import { LineChart } from 'cogni-reports';
 const data = {
   title: 'Line Chart',
   className: 'custom-line-chart',
-  order: 1,
   size: 'large',
   data: [
     {
@@ -183,7 +195,6 @@ const main = () => (
 export default main;
 
 ```
-
 <br/>
 
 ### - 🗺️ Map
@@ -193,6 +204,7 @@ This component shows the world map, with the passed countries highlighted, each 
 <br/>
 <br/>
 
+##### Passed props
 | Prop    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | size | Controls the chart size | `small`, `medium`, `large` | `large` | **false** |
@@ -201,7 +213,13 @@ This component shows the world map, with the passed countries highlighted, each 
 | data | An array of objects, each of which describes a specific piece on the pie chart | _  | _ | **true**
 | colors | An array of strings, the number of colors provided will be the number of groups the `maxNumber` will be divided into | _  | _ | **true**
 | maxNumber | The maximum value number, the value of each country should be lower than this number | _  | _ | **true**
+<br/>
 
+##### Data object
+| Name    | Description                              | Options       | Required |
+|-----------|------------------------------------------|------------|----|
+| id | Country code | example: `US` | **true** |
+| value | Number associated with this country | any number (should be smaller than `maxNumber`) | **true** |
 <br/>
 
 ##### 👨‍💻 Usage example
@@ -212,7 +230,6 @@ import { Map } from 'cogni-reports';
 const data = {
   title: 'Map',
   className: 'custom-map',
-  order: 3,
   size: 'medium',
   maxNumber: 10000,
   colors: ['#656da3', '#f6982e', '#4d9c5d', '#288cc2'],
@@ -235,7 +252,6 @@ const main = () => (
 
 export default main;
 ```
-
 <br/>
 
 ### - <img src="https://cutt.ly/DtpVcFg" style="width:25px;margin-bottom:-4px" /> Pie Chart
@@ -245,14 +261,22 @@ export default main;
 <br/>
 <br/>
 
-
+##### Passed props
 | Prop    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | size | Controls the chart size | `small`, `medium`, `large` | `large` | **false** |
 | title | Title at the top of the chart | any string | _ | **false** |
 | className | Sets line chart custom className | any string | _ | **false** |
 | data | An array of objects, each of which describes a specific piece on the pie chart | _  | _ | **true**
+<br/>
 
+##### Data object
+| Name    | Description                              | Options       | Default | Required |
+|-----------|------------------------------------------|------------|---------|----|
+| id | An identification for the pie piece | any string, example: `visits` | _ | **true** |
+| label | A label that appears when you hover on this pie piece | any string, example: `Visits` | _ | **true**
+| color | Line color and legend background color | any color string | `#000` | **false** |
+| value | Number associated with this pie piece | any number | _ | **true**|
 <br/>
 
 ##### 👨‍💻 Usage example
@@ -263,7 +287,6 @@ import { PieChart } from 'cogni-reports';
 const data = {
   title: 'Pie Chart',
   className: 'testClass',
-  order: 4,
   size: 'medium',
   data: [
     {
@@ -287,7 +310,6 @@ const main = () => (
 
 export default main;
 ```
-
 <br/>
 
 ### - 🔢 Statistics
@@ -297,13 +319,25 @@ export default main;
 <br/>
 <br/>
 
+##### Passed props
 | Prop    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | size | Controls the chart size | `small`, `medium`, `large` | `large` | **false** |
 | title | Title at the top of the chart | any string | _ | **false** |
 | className | Sets line chart custom className | any string | _ | **false** |
 | data | An array of objects, each of which describes a specific box in the statistics | _  | _ | **true**
+<br/>
 
+##### Data object
+| Name    | Description                              | Options       | Default | Required |
+|-----------|------------------------------------------|------------|---------|----|
+| title | Box title | any string, example: `visits` | _ | **true** |
+| backgroundColor | Box background color | any color string | `#fff` | **false** |
+| color | Box text color | any color string | `#000` | **false** |
+| unit | Value unit | any string | _ | **false** |
+| value | Number associated with box | any number | _ | **true**|
+| min | Minimum value for this legend, if the legend value is lower than this number, a down arrow will be displayed | any number | _ | **false** |
+| max | Maximum value for this legend, if the legend value is higher than this number, an up arrow will be displayed. If the legend value is between `min` and `max`, a checkmark is displayed | any number | _ | **false** |
 <br/>
 
 ##### 👨‍💻 Usage example
@@ -314,14 +348,13 @@ import { Statistics } from 'cogni-reports';
 const data = {
   title: 'Statistics',
   className: 'custom-statistics',
-  order: 2,
   size: 'large',
   data: [
     {
       title: 'visits',
       value: 20,
       unit: 'k',
-      textColor: '#fff',
+      color: '#fff',
       backgroundColor: '#656da3',
       min: 10,
       max: 19,
@@ -330,7 +363,7 @@ const data = {
       title: 'clicks',
       value: 20,
       unit: 'k',
-      textColor: '#fff',
+      color: '#fff',
       backgroundColor: '#f6982e',
       min: 10,
       max: 21,
@@ -367,25 +400,29 @@ const data = {
   ],
 };
 
-
 const main = () => (
   <Statistics {...data} />
 );
 
 export default main;
 ```
-
 <br/>
 
 ### - 📙 Full Report
 
-
+##### Passed props
 | Prop    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | title | Title at the top of the chart | any string | _ | **false** |
 | className | Sets line chart custom className | any string | _ | **false** |
 | data | An array of objects, each of which resembles data provided to a specific component | _  | _ | **true**
+<br/>
 
+##### Data object
+| Name    | Description                              | Options       | Default | Required |
+|-----------|------------------------------------------|------------|---------|----|
+| type | Box title | `statistics`, `lineChart`, `map`, `pieChart` | _ | **true** |
+| order | Order of each component (in an ascending order) | any number starting from `1` | _ | **false** |
 <br/>
 
 ##### 👨‍💻 Usage example
@@ -396,15 +433,19 @@ import FullReport from 'cogni-reports';
 const data = [
   {
     type: 'statistics',
+    order: 1,
     ...statisticsData,
   }, {
     type: 'lineChart',
+    order: 2,
     ...lineChartData,
   }, {
     type: 'map',
+    order: 3,
     ...mapData,
   }, {
     type: 'pieChart',
+    order: 4,
     ...pieChartData,
   },
 ];
