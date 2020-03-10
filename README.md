@@ -19,16 +19,16 @@ See the [storybook](https://cogni-reports.now.sh/) for live examples.
 
 Install **cogni-reports** using **yarn**:
 
-```shell
+```js
   $ yarn add cogni-reports
 ```
 or **npm**:
-```shell
+```js
   $ npm i cogni-reports
 ```
 
 Import the necessary components from the library:
-```shell
+```js
   $ import ReportPage, { LineChart, Map, PieChart, Statistics } from 'cogni-reports';
 ```
 <br/>
@@ -41,7 +41,7 @@ Import the necessary components from the library:
 <br/>
 <br/>
 
-##### Passed props
+#### Passed props
 | Prop    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | size | Controls the chart size | `small`, `medium`, `large` | `large` | **false** |
@@ -50,7 +50,7 @@ Import the necessary components from the library:
 | data | An array of objects, each of which describes a specific line on the chart | _  | _ | **true**
 <br/>
 
-##### Data object
+#### Data object
 | Name    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | id | An identification for the line | any string, example: `visits` | _ | **true** |
@@ -65,9 +65,9 @@ Import the necessary components from the library:
 | <small>legend.max<small> | Maximum value for this legend, if the legend value is higher than this number, an up arrow will be displayed. If the legend value is between `min` and `max`, a checkmark is displayed | any number | _ | **false** |
 <br/>
 
-##### 👨‍💻 Usage example
+#### 👨‍💻 Usage example
 
-```shell
+```js
 import { LineChart } from 'cogni-reports';
 
 const data = {
@@ -214,7 +214,7 @@ This component shows the world map, with the passed countries highlighted, each 
 <br/>
 <br/>
 
-##### Passed props
+#### Passed props
 | Prop    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | size | Controls the chart size | `small`, `medium`, `large` | `large` | **false** |
@@ -225,16 +225,16 @@ This component shows the world map, with the passed countries highlighted, each 
 | maxNumber | The maximum value number, the value of each country should be lower than this number | _  | _ | **true**
 <br/>
 
-##### Data object
+#### Data object
 | Name    | Description                              | Options       | Required |
 |-----------|------------------------------------------|------------|----|
 | id | Country code | example: `US` | **true** |
 | value | Number associated with this country | any number (should be smaller than `maxNumber`) | **true** |
 <br/>
 
-##### 👨‍💻 Usage example
+#### 👨‍💻 Usage example
 
-```shell
+```js
 import { Map } from 'cogni-reports';
 
 const data = {
@@ -271,7 +271,7 @@ export default main;
 <br/>
 <br/>
 
-##### Passed props
+#### Passed props
 | Prop    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | size | Controls the chart size | `small`, `medium`, `large` | `large` | **false** |
@@ -280,7 +280,7 @@ export default main;
 | data | An array of objects, each of which describes a specific piece on the pie chart | _  | _ | **true**
 <br/>
 
-##### Data object
+#### Data object
 | Name    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | id | An identification for the pie piece | any string, example: `visits` | _ | **true** |
@@ -289,9 +289,9 @@ export default main;
 | value | Number associated with this pie piece | any number | _ | **true**|
 <br/>
 
-##### 👨‍💻 Usage example
+#### 👨‍💻 Usage example
 
-```shell
+```js
 import { PieChart } from 'cogni-reports';
 
 const data = {
@@ -329,7 +329,7 @@ export default main;
 <br/>
 <br/>
 
-##### Passed props
+#### Passed props
 | Prop    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | size | Controls the chart size | `small`, `medium`, `large` | `large` | **false** |
@@ -338,7 +338,7 @@ export default main;
 | data | An array of objects, each of which describes a specific box in the statistics | _  | _ | **true**
 <br/>
 
-##### Data object
+#### Data object
 | Name    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | title | Box title | any string, example: `visits` | _ | **true** |
@@ -350,9 +350,9 @@ export default main;
 | max | Maximum value for this legend, if the legend value is higher than this number, an up arrow will be displayed. If the legend value is between `min` and `max`, a checkmark is displayed | any number | _ | **false** |
 <br/>
 
-##### 👨‍💻 Usage example
+#### 👨‍💻 Usage example
 
-```shell
+```js
 import { Statistics } from 'cogni-reports';
 
 const data = {
@@ -420,7 +420,7 @@ export default main;
 
 ### - 📙 Full Report
 
-##### Passed props
+#### Passed props
 | Prop    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | title | Title at the top of the chart | any string | _ | **false** |
@@ -428,16 +428,16 @@ export default main;
 | data | An array of objects, each of which resembles data provided to a specific component | _  | _ | **true**
 <br/>
 
-##### Data object
+#### Data object
 | Name    | Description                              | Options       | Default | Required |
 |-----------|------------------------------------------|------------|---------|----|
 | type | Box title | `statistics`, `lineChart`, `map`, `pieChart` | _ | **true** |
 | order | Order of each component (in an ascending order) | any number starting from `1` | _ | **false** |
 <br/>
 
-##### 👨‍💻 Usage example
+#### 👨‍💻 Usage example
 
-```shell
+```js
 import FullReport from 'cogni-reports';
 
 const data = [
