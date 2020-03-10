@@ -12,7 +12,7 @@
 
 ## 🔨 Usage
 
-Install Grommet using either **yarn** or **npm**:
+Install cogni-reports using either **yarn** or **npm**:
 
 ```shell
   $ yarn add cogni-reports
@@ -25,6 +25,7 @@ Import the necessary components from the library:
 
 
 <br/>
+
 ## 🧱 Components
 ### - 📈 Line Chart
 <br/>
@@ -40,6 +41,7 @@ Import the necessary components from the library:
 | data | An array of objects, each of which describes a specific line on the chart | _  | _ | **true**
 
 <br/>
+
 ##### 👨‍💻 Usage example
 
 ```shell
@@ -183,6 +185,7 @@ export default main;
 ```
 
 <br/>
+
 ### - 🗺️ Map
 This component shows the world map, with the passed countries highlighted, each country has a value, the country's group will be decided as compared with the passed `maxNumber`
 <br/>
@@ -200,6 +203,7 @@ This component shows the world map, with the passed countries highlighted, each 
 | maxNumber | The maximum value number, the value of each country should be lower than this number | _  | _ | **true**
 
 <br/>
+
 ##### 👨‍💻 Usage example
 
 ```shell
@@ -233,6 +237,7 @@ export default main;
 ```
 
 <br/>
+
 ### - <img src="https://cutt.ly/DtpVcFg" style="width:25px;margin-bottom:-4px" /> Pie Chart
 
 <br/>
@@ -249,6 +254,7 @@ export default main;
 | data | An array of objects, each of which describes a specific piece on the pie chart | _  | _ | **true**
 
 <br/>
+
 ##### 👨‍💻 Usage example
 
 ```shell
@@ -283,6 +289,7 @@ export default main;
 ```
 
 <br/>
+
 ### - 🔢 Statistics
 
 <br/>
@@ -298,6 +305,7 @@ export default main;
 | data | An array of objects, each of which describes a specific box in the statistics | _  | _ | **true**
 
 <br/>
+
 ##### 👨‍💻 Usage example
 
 ```shell
@@ -368,6 +376,7 @@ export default main;
 ```
 
 <br/>
+
 ### - 📙 Full Report
 
 
@@ -378,6 +387,7 @@ export default main;
 | data | An array of objects, each of which resembles data provided to a specific component | _  | _ | **true**
 
 <br/>
+
 ##### 👨‍💻 Usage example
 
 ```shell
