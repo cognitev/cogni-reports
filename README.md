@@ -264,7 +264,7 @@ export default main;
 ```
 <br/>
 
-### - <img src="https://i.ibb.co/dm4X0tD/Webp-net-resizeimage.png" style="margin-bottom:-4px" /> Pie Chart
+### - ⭕ Pie Chart
 
 <br/>
 <img src="https://i.ibb.co/D1jjfTb/pie.png" />
