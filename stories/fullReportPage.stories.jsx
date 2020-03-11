@@ -1,10 +1,8 @@
 import React from 'react';
-import ReportPage, {
-  Statistics, LineChart, Map, PieChart,
-} from '../src/index';
+import ReportPage from '../src/index';
 
 export default {
-  title: 'cogni-report',
+  title: 'Full Report Page',
 };
 
 const lineChartData = {
@@ -246,26 +244,11 @@ const fullPageData = [
   },
 ];
 
-export const FullReportPage = () => (
+
+export const main = () => (
   <ReportPage
     title="Report Title"
     data={fullPageData}
     className="custom-full-page"
   />
-);
-
-export const LineChartComponent = () => (
-  <LineChart {...lineChartData} />
-);
-
-export const StatisticsComponent = () => (
-  <Statistics {...statisticsData} />
-);
-
-export const MapComponent = () => (
-  <Map {...mapData} />
-);
-
-export const PieChartComponent = () => (
-  <PieChart {...pieChartData} />
 );
